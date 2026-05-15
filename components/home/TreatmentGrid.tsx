@@ -70,14 +70,7 @@ export default function TreatmentGrid() {
                       {treatment.shortDescription}
                     </CardDescription>
                   </CardHeader>
-                  <CardContent className="px-8 pb-4">
-                    <div className="flex items-baseline justify-between border-t border-aria-teal/5 pt-6">
-                      <span className="text-[10px] font-sans font-bold uppercase tracking-[0.2em] text-aria-gold">Investment From</span>
-                      <span className="text-xl font-serif font-bold text-aria-teal">
-                        {treatment.priceStarting}
-                      </span>
-                    </div>
-                  </CardContent>
+
                   <CardFooter className="p-8 pt-4">
                     <Link href={`/treatments/${treatment.slug}`} className="w-full">
                       <Button
