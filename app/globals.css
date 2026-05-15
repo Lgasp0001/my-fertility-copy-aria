@@ -24,26 +24,26 @@
 
 @layer base {
   :root {
-    --background: 0 0% 98%;
-    --foreground: 282 23% 14%;
+    --background: 40 10% 94%; /* #F2F0ED */
+    --foreground: 200 10% 20%;
     --card: 0 0% 100%;
-    --card-foreground: 282 23% 14%;
+    --card-foreground: 200 10% 20%;
     --popover: 0 0% 100%;
-    --popover-foreground: 282 23% 14%;
-    --primary: 282 23% 32%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 0 71% 84%;
-    --secondary-foreground: 282 23% 14%;
-    --muted: 282 10% 92%;
-    --muted-foreground: 282 10% 42%;
-    --accent: 28 64% 91%;
-    --accent-foreground: 282 23% 14%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 282 10% 88%;
-    --input: 282 10% 88%;
-    --ring: 0 71% 84%;
-    --radius: 0.5rem;
+    --popover-foreground: 200 10% 20%;
+    --primary: 190 30% 58%; /* #72A9B5 */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 40 40% 64%; /* #C9B07D */
+    --secondary-foreground: 0 0% 100%;
+    --muted: 40 10% 90%;
+    --muted-foreground: 0 0% 40%;
+    --accent: 40 40% 64%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 40 10% 85%;
+    --input: 40 10% 85%;
+    --ring: 190 30% 58%;
+    --radius: 2rem; /* Pill shaped buttons */
   }
 }
 
@@ -68,15 +68,15 @@
 
   .premium-glass {
     @apply bg-white/40 backdrop-blur-xl border border-white/30;
-    box-shadow: 0 8px 32px 0 rgba(93, 62, 99, 0.07);
+    box-shadow: 0 8px 32px 0 rgba(114, 169, 181, 0.07);
   }
 
   .glass-glow {
-    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 0 8px 32px 0 rgba(93, 62, 99, 0.07);
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 0 8px 32px 0 rgba(114, 169, 181, 0.07);
   }
 
-  .berry-glass-glow {
-    box-shadow: inset 0 0 20px rgba(93, 62, 99, 0.1), 0 8px 32px 0 rgba(93, 62, 99, 0.15);
+  .aria-glass-glow {
+    box-shadow: inset 0 0 20px rgba(114, 169, 181, 0.1), 0 8px 32px 0 rgba(114, 169, 181, 0.15);
   }
 
   .shine-effect {
@@ -123,11 +123,11 @@
 
   /* Boutique Polish */
   .heading-premium {
-    @apply tracking-tighter leading-[1.1] text-berry;
+    @apply font-serif tracking-tight leading-[1.1] text-aria-teal;
   }
 
   .subheading-premium {
-    @apply tracking-tight leading-relaxed text-gray-600;
+    @apply tracking-tight leading-relaxed text-aria-dark;
   }
 
   /* Fixed Grain Overlay - Authenticity & Depth */
@@ -161,5 +161,5 @@
 /* Global Smoothness */
 
 ::selection {
-  @apply bg-rose/30 text-berry;
+  @apply bg-aria-teal/30 text-aria-teal;
 }

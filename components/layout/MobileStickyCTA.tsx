@@ -9,24 +9,24 @@ interface MobileStickyCTAProps {
 
 export default function MobileStickyCTA({ onBookingClick }: MobileStickyCTAProps) {
   return (
-    <div className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/90 backdrop-blur-lg border-t border-rose/10 shadow-[0_-10px_40px_rgba(93,62,99,0.1)]">
-      <div className="flex flex-col p-4 pb-8">
-        <p className="text-[10px] text-berry/60 uppercase tracking-widest text-center mb-3 font-bold px-2">
-          Consultation covers history, tests, options, costs & next steps
+    <div className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-xl border-t border-aria-teal/5 shadow-[0_-20px_40px_rgba(114,169,181,0.1)]">
+      <div className="flex flex-col p-6 pb-8">
+        <p className="text-[9px] font-sans font-bold uppercase tracking-[0.2em] text-aria-teal/40 text-center mb-4">
+          Bespoke Consultations available this week
         </p>
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-2 gap-4">
           <a
-            href="tel:5125550198"
-            className="flex items-center justify-center space-x-2 bg-berry text-white h-14 rounded-2xl font-bold shadow-lg shadow-berry/20 active:scale-95 transition-all w-full"
+            href="tel:+442032636025"
+            className="flex items-center justify-center space-x-2 bg-white border border-aria-teal/10 text-aria-teal h-14 rounded-full font-sans font-bold text-[10px] uppercase tracking-widest shadow-md active:scale-95 transition-all w-full"
           >
-            <Phone className="w-5 h-5 text-rose" />
-            <span>Call Now</span>
+            <Phone className="w-4 h-4 text-aria-gold" />
+            <span>Call</span>
           </a>
           <Button
             onClick={onBookingClick}
-            className="bg-rose hover:bg-rose-600 text-white h-14 rounded-2xl font-bold shadow-lg shadow-rose/20 active:scale-95 transition-all w-full border-none"
+            className="bg-aria-teal hover:bg-aria-gold text-white h-14 rounded-full font-sans font-bold text-[10px] uppercase tracking-widest shadow-xl shadow-aria-teal/10 active:scale-95 transition-all w-full border-none"
           >
-            Book Now
+            Book Online
           </Button>
         </div>
       </div>

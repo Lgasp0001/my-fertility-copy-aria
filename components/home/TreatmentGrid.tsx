@@ -27,25 +27,25 @@ const iconMap: { [key: string]: React.ElementType } = {
 
 export default function TreatmentGrid() {
   return (
-    <section id="treatments" className="py-20 bg-gray-50">
+    <section id="treatments" className="py-24 bg-aria-beige/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-20"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-berry mb-4">
-            Specialized Care
+          <h2 className="text-4xl md:text-6xl font-serif font-medium text-aria-teal mb-6 tracking-tight">
+            Our Treatments
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            From initial consultations to advanced reproductive technology, we offer
-            comprehensive fertility solutions tailored to your unique journey.
+          <p className="text-xl font-sans text-aria-dark max-w-2xl mx-auto leading-relaxed font-light">
+            From initial consultations to world-class clinical expertise, we offer
+            personalized fertility solutions in the heart of London.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {treatments.map((treatment, index) => {
             const Icon = iconMap[treatment.icon] || Heart;
             return (
@@ -58,33 +58,33 @@ export default function TreatmentGrid() {
                 whileTap={{ scale: 0.98 }}
                 className="active-reveal"
               >
-                <Card className="h-full premium-glass shine-effect glass-glow border-white/20 hover:shadow-glass-hover transition-all duration-300 group cursor-pointer">
-                  <CardHeader>
-                    <div className="w-14 h-14 bg-gradient-to-br from-rose to-rose-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                      <Icon className="w-7 h-7 text-white" />
+                <Card className="h-full bg-white border-aria-teal/5 hover:border-aria-gold/20 hover:shadow-xl transition-all duration-500 group cursor-pointer rounded-[2rem] overflow-hidden">
+                  <CardHeader className="p-8">
+                    <div className="w-14 h-14 bg-aria-teal/5 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+                      <Icon className="w-7 h-7 text-aria-gold" />
                     </div>
-                    <CardTitle className="text-xl text-berry">
+                    <CardTitle className="text-2xl font-serif font-medium text-aria-teal mb-2">
                       {treatment.name}
                     </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription className="text-gray-600">
+                    <CardDescription className="text-aria-dark/70 font-sans font-light text-sm leading-relaxed">
                       {treatment.shortDescription}
                     </CardDescription>
-                    <div className="mt-4 flex items-baseline justify-between">
-                      <span className="text-sm text-gray-500">From</span>
-                      <span className="text-lg font-bold text-rose">
+                  </CardHeader>
+                  <CardContent className="px-8 pb-4">
+                    <div className="flex items-baseline justify-between border-t border-aria-teal/5 pt-6">
+                      <span className="text-[10px] font-sans font-bold uppercase tracking-[0.2em] text-aria-gold">Investment From</span>
+                      <span className="text-xl font-serif font-bold text-aria-teal">
                         {treatment.priceStarting}
                       </span>
                     </div>
                   </CardContent>
-                  <CardFooter>
+                  <CardFooter className="p-8 pt-4">
                     <Link href={`/treatments/${treatment.slug}`} className="w-full">
                       <Button
-                        variant="ghost"
-                        className="w-full border border-rose text-rose hover:bg-rose hover:text-white transition-colors"
+                        variant="outline"
+                        className="w-full rounded-full border-aria-teal/10 text-aria-teal hover:bg-aria-teal hover:text-white transition-all font-sans font-bold text-[10px] uppercase tracking-[0.2em] py-6"
                       >
-                        Learn More
+                        Explore Treatment
                       </Button>
                     </Link>
                   </CardFooter>
@@ -99,17 +99,16 @@ export default function TreatmentGrid() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="text-center mt-12"
+          className="text-center mt-20"
         >
-          <p className="text-gray-600 mb-4">
-            Not sure where to start your journey?
+          <p className="text-aria-dark/60 font-sans font-light text-sm mb-6">
+            Begin your journey with a private consultation.
           </p>
           <Link href="#quiz">
             <Button
-              variant="outline"
-              className="border-berry text-berry hover:bg-berry hover:text-white"
+              className="bg-aria-gold hover:bg-aria-teal text-white rounded-full px-10 py-6 text-[10px] font-bold uppercase tracking-[0.2em] shadow-lg transition-all"
             >
-              Take Our Fertility Assessment
+              Take Our Assessment
             </Button>
           </Link>
         </motion.div>

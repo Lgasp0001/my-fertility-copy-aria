@@ -1,74 +1,72 @@
 import './globals.css';
 import React from 'react';
 import type { Metadata } from 'next';
-import { GeistSans } from 'geist/font/sans';
+import { Cormorant_Garamond, Montserrat } from 'next/font/google';
 import VoiceflowChat from '@/components/VoiceflowChat';
 
+const cormorant = Cormorant_Garamond({
+  subsets: ['latin'],
+  variable: '--font-serif',
+  weight: ['300', '400', '500', '600', '700'],
+});
+
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  variable: '--font-sans',
+  weight: ['300', '400', '500', '600', '700'],
+});
+
 export const metadata: Metadata = {
-  metadataBase: new URL('https://frosts-fertility.com'),
+  metadataBase: new URL('https://ariafertility.co.uk'),
   title: {
-    default: 'Frosts Fertility Clinic | Compassionate Family Building in Austin, TX',
-    template: '%s | Frosts Fertility Clinic'
+    default: 'Aria Fertility Clinic | Bespoke Fertility Care in Marylebone, London',
+    template: '%s | Aria Fertility Clinic'
   },
-  description: 'Experience compassionate care and advanced fertility solutions. Start your journey to parenthood in our South Congress studio. IVF, Egg Freezing & Consultations.',
+  description: 'Experience world-class fertility care in the heart of London. Aria Fertility offers IVF, Egg Freezing, and personalized treatment plans in a luxury clinical setting.',
   keywords: [
-    'Austin Fertility Clinic',
-    'Fertility Specialist Austin',
-    'IVF Austin',
-    'Egg Freezing Austin',
-    'Parenthood Journey',
-    'Fertility Treatments',
-    'Compassionate Fertility Care',
-    'Family Building Austin',
-    'South Congress Austin',
-    'Boutique Fertility Clinic'
+    'London Fertility Clinic',
+    'Marylebone Fertility Specialist',
+    'IVF London',
+    'Egg Freezing London',
+    'Aria Fertility',
+    'Bespoke Fertility Care',
+    'Welbeck Way Clinic'
   ],
-  authors: [{ name: 'Frosts Fertility' }],
-  creator: 'Frosts Fertility',
-  publisher: 'Frosts Fertility',
+  authors: [{ name: 'Aria Fertility' }],
+  creator: 'Aria Fertility',
+  publisher: 'Aria Fertility',
   formatDetection: {
     email: false,
     address: true,
     telephone: true,
   },
   openGraph: {
-    title: 'Frosts Fertility Clinic | Compassionate Family Building',
-    description: 'Experience fertility care redefined. Advanced solutions meeting compassionate care in Austin, TX. Start your journey to parenthood today.',
-    url: 'https://frosts-fertility.com',
-    siteName: 'Frosts Fertility Clinic',
+    title: 'Aria Fertility Clinic | Bespoke Fertility Care London',
+    description: 'Supporting you every step of the way. World-class expertise meets compassionate care in Marylebone.',
+    url: 'https://ariafertility.co.uk',
+    siteName: 'Aria Fertility Clinic',
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Frosts Fertility Clinic - Premium Boutique Care in Austin',
+        alt: 'Aria Fertility Clinic - Luxury Clinical Excellence',
       },
     ],
-    locale: 'en_US',
+    locale: 'en_GB',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Frosts Fertility Clinic | Boutique Austin Fertility',
-    description: 'Start your journey to parenthood with advanced care in South Congress. Compassionate support available.',
+    title: 'Aria Fertility Clinic | Bespoke London Fertility',
+    description: 'Expert-led fertility journeys in the heart of London.',
     images: ['/twitter-image.png'],
-    creator: '@frostsfertility',
+    creator: '@ariafertility',
   },
   viewport: {
     width: 'device-width',
     initialScale: 1,
     maximumScale: 1,
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
   },
   icons: {
     icon: [
@@ -78,7 +76,6 @@ export const metadata: Metadata = {
       { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
     ],
   },
-  manifest: '/site.webmanifest',
 };
 
 export default function RootLayout({
@@ -87,8 +84,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={GeistSans.className}>
+    <html lang="en" className={`scroll-smooth ${cormorant.variable} ${montserrat.variable}`}>
+      <body className="font-sans antialiased">
         <div className="grain-overlay" aria-hidden="true" />
         {children}
         <VoiceflowChat />

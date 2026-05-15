@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { X, CheckCircle } from 'lucide-react';
+import { X, CheckCircle, ShieldCheck } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -52,30 +52,30 @@ export default function BookingModal({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-berry/40 backdrop-blur-sm">
-      <div className="relative w-full max-w-lg bg-white rounded-2xl shadow-2xl animate-in fade-in zoom-in-95 duration-300 border border-white/20">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-aria-teal/40 backdrop-blur-md">
+      <div className="relative w-full max-w-xl bg-white rounded-[3.5rem] shadow-[0_32px_64px_-12px_rgba(114,169,181,0.3)] animate-in fade-in zoom-in-95 duration-500 border border-white/20 overflow-hidden">
         {/* Close Button */}
         <button
           onClick={handleClose}
-          className="absolute top-4 right-4 p-2 hover:bg-rose/10 rounded-full transition-colors group"
+          className="absolute top-8 right-8 p-3 hover:bg-aria-teal/5 rounded-full transition-all duration-300 group z-10"
         >
-          <X className="w-5 h-5 text-gray-400 group-hover:text-rose" />
+          <X className="w-5 h-5 text-aria-dark/20 group-hover:text-aria-teal" />
         </button>
 
         {!isSubmitted ? (
-          <div className="p-8">
-            <div className="text-center mb-6">
-              <h2 className="text-3xl font-bold text-berry mb-2">
-                Book Your Private Consultation
+          <div className="p-10 md:p-16">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl md:text-4xl font-serif font-medium text-aria-teal mb-4 tracking-tight">
+                Bespoke Consultation
               </h2>
-              <p className="text-gray-600">
-                Start your journey to building your dream family
+              <p className="text-aria-dark/60 font-sans font-light text-base max-w-sm mx-auto leading-relaxed">
+                Start your journey with world-class expertise in the heart of London.
               </p>
             </div>
 
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-8">
               <div>
-                <Label htmlFor="name" className="text-berry/70">Full Name</Label>
+                <Label htmlFor="name" className="text-[10px] font-sans font-bold uppercase tracking-widest text-aria-dark/50 ml-4 mb-2 block">Full Name</Label>
                 <Input
                   id="name"
                   required
@@ -83,13 +83,13 @@ export default function BookingModal({
                   onChange={(e) =>
                     setFormData({ ...formData, name: e.target.value })
                   }
-                  placeholder="Your Name"
-                  className="mt-1 border-gray-200 focus:border-rose focus:ring-rose/20"
+                  placeholder="Name"
+                  className="rounded-full px-8 py-6 border-aria-teal/10 focus:ring-4 focus:ring-aria-teal/5 transition-all font-sans font-light"
                 />
               </div>
 
               <div>
-                <Label htmlFor="email" className={!isEmailValid && formData.email !== '' ? 'text-red-500' : 'text-berry/70'}>
+                <Label htmlFor="email" className={`text-[10px] font-sans font-bold uppercase tracking-widest ml-4 mb-2 block ${!isEmailValid && formData.email !== '' ? 'text-red-400' : 'text-aria-dark/50'}`}>
                   Email Address
                 </Label>
                 <Input
@@ -100,19 +100,16 @@ export default function BookingModal({
                   onChange={(e) =>
                     setFormData({ ...formData, email: e.target.value })
                   }
-                  placeholder="name@example.com"
-                  className={`mt-1 transition-colors border-gray-200 focus:border-rose focus:ring-rose/20 ${!isEmailValid && formData.email !== ''
-                    ? 'border-red-500 focus-visible:ring-red-500'
-                    : ''
+                  placeholder="email@example.com"
+                  className={`rounded-full px-8 py-6 transition-all font-sans font-light border-aria-teal/10 ${!isEmailValid && formData.email !== ''
+                    ? 'border-red-300 focus:ring-red-50'
+                    : 'focus:ring-4 focus:ring-aria-teal/5'
                     }`}
                 />
-                {!isEmailValid && formData.email !== '' && (
-                  <p className="text-red-500 text-xs mt-1">Please include a valid email address.</p>
-                )}
               </div>
 
               <div>
-                <Label htmlFor="phone" className="text-berry/70">Phone Number</Label>
+                <Label htmlFor="phone" className="text-[10px] font-sans font-bold uppercase tracking-widest text-aria-dark/50 ml-4 mb-2 block">Phone Number</Label>
                 <Input
                   id="phone"
                   type="tel"
@@ -121,25 +118,25 @@ export default function BookingModal({
                   onChange={(e) =>
                     setFormData({ ...formData, phone: e.target.value })
                   }
-                  placeholder="(512) 555-0123"
-                  className="mt-1 border-gray-200 focus:border-rose focus:ring-rose/20"
+                  placeholder="+44"
+                  className="rounded-full px-8 py-6 border-aria-teal/10 focus:ring-4 focus:ring-aria-teal/5 transition-all font-sans font-light"
                 />
               </div>
 
               <div>
-                <Label htmlFor="treatment" className="text-berry/70">Service of Interest</Label>
+                <Label htmlFor="treatment" className="text-[10px] font-sans font-bold uppercase tracking-widest text-aria-dark/50 ml-4 mb-2 block">Pathway of Interest</Label>
                 <Select
                   value={formData.treatment}
                   onValueChange={(value) =>
                     setFormData({ ...formData, treatment: value })
                   }
                 >
-                  <SelectTrigger className="mt-1 border-gray-200 focus:border-rose focus:ring-rose/20">
-                    <SelectValue placeholder="Select a service" />
+                  <SelectTrigger className="rounded-full px-8 py-6 border-aria-teal/10 focus:ring-4 focus:ring-aria-teal/5 transition-all font-sans font-light">
+                    <SelectValue placeholder="Select a pathway" />
                   </SelectTrigger>
-                  <SelectContent>
+                  <SelectContent className="rounded-2xl border-aria-teal/5 shadow-2xl">
                     {treatments.map((treatment) => (
-                      <SelectItem key={treatment.id} value={treatment.slug}>
+                      <SelectItem key={treatment.id} value={treatment.slug} className="font-sans font-light py-3 px-6">
                         {treatment.name}
                       </SelectItem>
                     ))}
@@ -147,58 +144,51 @@ export default function BookingModal({
                 </Select>
               </div>
 
-              <p className="text-[14px] text-[#666] text-center italic leading-snug">
-                A fertility consultation covers your history, tests, treatment options, costs, and next steps. Our team will contact you within 48 hours to guide your next steps.
+              <p className="text-[11px] font-sans text-aria-dark/40 text-center italic leading-relaxed">
+                Your consultation covers clinical history, diagnostics, and next steps. We will contact you within 24 hours to confirm your private booking.
               </p>
 
               <Button
                 type="submit"
-                className={`w-full py-6 text-lg rounded-xl transition-all duration-300 font-bold ${isFormValid
-                  ? 'bg-rose hover:bg-rose-600 text-white shadow-lg shadow-rose/20 scale-[1.01]'
-                  : 'bg-rose/40 cursor-not-allowed text-white/90'
+                className={`w-full py-8 rounded-full text-xs font-sans font-bold uppercase tracking-[0.2em] transition-all duration-500 ${isFormValid
+                  ? 'bg-aria-teal hover:bg-aria-gold text-white shadow-xl shadow-aria-teal/20 scale-[1.02]'
+                  : 'bg-aria-teal/20 cursor-not-allowed text-white/50'
                   }`}
               >
-                Book My Consultation
+                Request Consultation
               </Button>
 
-              <p className="text-[10px] text-gray-400 text-center uppercase tracking-widest leading-relaxed">
-                By submitting, you agree to our Privacy Policy. Our team will contact you within 48 hours to guide your next steps.
+              <p className="text-[9px] font-sans font-bold uppercase tracking-[0.3em] text-aria-dark/20 text-center flex items-center justify-center gap-2">
+                <ShieldCheck className="w-3 h-3" />
+                Discrete London Clinic Sanctuary
               </p>
             </form>
           </div>
         ) : (
-          <div className="p-10 text-center">
-            <div className="w-20 h-20 bg-rose/10 rounded-full flex items-center justify-center mx-auto mb-6">
-              <CheckCircle className="w-12 h-12 text-rose" />
+          <div className="p-16 md:p-24 text-center">
+            <div className="w-20 h-20 bg-aria-teal/5 rounded-full flex items-center justify-center mx-auto mb-10">
+              <CheckCircle className="w-10 h-10 text-aria-gold" />
             </div>
 
-            <h2 className="text-3xl font-bold text-berry mb-4">
-              Your Journey Begins Now
+            <h2 className="text-3xl md:text-4xl font-serif font-medium text-aria-teal mb-6">
+              Your Journey Begins
             </h2>
 
-            <p className="text-gray-600 mb-6 leading-relaxed">
-              Thank you, {formData.name}. Our Care Coordinator, Sarah, will
-              reach out discreetly within 48 hours to
-              finalize your private consultation time.
+            <p className="text-lg font-sans font-light text-aria-dark/70 mb-12 max-w-sm mx-auto leading-relaxed">
+              Thank you, {formData.name}. Our Care Coordinator will contact you within 24 hours to finalize your private consultation in Marylebone.
             </p>
 
-            <div className="bg-rose/5 border border-rose/10 rounded-2xl p-5 mb-8">
-              <p className="text-sm text-berry/80 font-medium">
-                While you wait, check your email for our &ldquo;Path to Parenthood
-                Guide&rdquo; which explains our boutique approach and advance fertility
-                financing in detail.
+            <div className="bg-aria-beige/20 border border-aria-teal/5 rounded-[2rem] p-8 mb-10">
+              <p className="text-sm text-aria-teal font-sans font-medium leading-relaxed italic">
+                &ldquo;Check your inbox for our Bespoke Fertility Guide, which details our Marylebone clinical approach and financing options.&rdquo;
               </p>
             </div>
 
-            <p className="text-berry font-semibold mb-8 italic">
-              We look forward to supporting you.
-            </p>
-
             <Button
               onClick={handleClose}
-              className="bg-berry hover:bg-berry-700 text-white px-10 py-5 rounded-xl font-bold transition-all shadow-lg"
+              className="bg-aria-teal hover:bg-aria-gold text-white px-12 py-7 rounded-full font-sans font-bold text-xs uppercase tracking-[0.2em] transition-all duration-500 shadow-xl"
             >
-              Close
+              Return to Site
             </Button>
           </div>
         )}

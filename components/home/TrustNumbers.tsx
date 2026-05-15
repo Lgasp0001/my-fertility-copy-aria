@@ -9,29 +9,37 @@ export default function TrustNumbers() {
   const isInView = useInView(ref, { once: true });
 
   const stats = [
-    { number: 850, suffix: '+', label: 'Families Started' },
-    { number: 4.9, suffix: '/5', label: 'Star Rating', decimal: true },
+    { number: 850, suffix: '+', label: 'Lives Transformed' },
+    { number: 4.9, suffix: '/5', label: 'Patient Rating', decimal: true },
     { number: 20, suffix: '+', label: 'Years Experience' },
-    { number: 45, suffix: '/mo', label: 'Finance from', prefix: '$' },
+    { number: 45, suffix: '/mo', label: 'Finance from', prefix: '£' },
   ];
 
   return (
-    <section className="py-16 bg-berry text-white" ref={ref}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+    <section className="py-20 bg-aria-teal text-white relative overflow-hidden" ref={ref}>
+       {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0" style={{
+          backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
+          backgroundSize: '40px 40px'
+        }} />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-12 md:gap-16">
           {stats.map((stat, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, scale: 0.5 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={
                 isInView
-                  ? { opacity: 1, scale: 1 }
-                  : { opacity: 0, scale: 0.5 }
+                  ? { opacity: 1, y: 0 }
+                  : { opacity: 0, y: 20 }
               }
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              transition={{ duration: 0.8, delay: index * 0.1 }}
               className="text-center"
             >
-              <div className="text-4xl md:text-5xl font-bold text-rose mb-2">
+              <div className="text-5xl md:text-6xl font-serif font-bold text-aria-gold mb-4 tracking-tight">
                 {stat.prefix}
                 <AnimatedNumber
                   value={stat.number}
@@ -40,7 +48,9 @@ export default function TrustNumbers() {
                 />
                 {stat.suffix}
               </div>
-              <p className="text-gray-300">{stat.label}</p>
+              <p className="text-aria-beige/60 font-sans font-bold uppercase tracking-[0.2em] text-[10px]">
+                {stat.label}
+              </p>
             </motion.div>
           ))}
         </div>
@@ -63,7 +73,7 @@ function AnimatedNumber({
   useEffect(() => {
     if (!isInView) return;
 
-    const duration = 800;
+    const duration = 1200;
     const steps = 60;
     const increment = value / steps;
     let current = 0;

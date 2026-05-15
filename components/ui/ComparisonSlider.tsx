@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface ComparisonSliderProps {
@@ -60,7 +59,7 @@ export default function ComparisonSlider({
     return (
         <div
             ref={containerRef}
-            className="relative w-full aspect-[16/10] rounded-[2rem] overflow-hidden select-none cursor-ew-resize group touch-none shadow-2xl"
+            className="relative w-full aspect-[16/10] rounded-[3rem] overflow-hidden select-none cursor-ew-resize group touch-none shadow-2xl"
             onMouseDown={onMouseDown}
             onTouchStart={onMouseDown}
         >
@@ -85,7 +84,7 @@ export default function ComparisonSlider({
                 style={{ left: `${sliderPosition}%` }}
             >
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-full shadow-2xl flex items-center justify-center">
-                    <div className="flex items-center space-x-0.5 text-berry">
+                    <div className="flex items-center space-x-0.5 text-aria-teal">
                         <ChevronLeft className="w-3 h-3 sm:w-4 sm:h-4" />
                         <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4" />
                     </div>
@@ -93,13 +92,13 @@ export default function ComparisonSlider({
             </div>
 
             {/* Labels */}
-            <div className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <span className="bg-berry/80 backdrop-blur-md text-white text-[10px] sm:text-xs px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full uppercase tracking-widest font-bold border border-white/10">
+            <div className="absolute bottom-6 left-6 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                <span className="bg-aria-teal/80 backdrop-blur-md text-white text-[9px] px-4 py-1.5 rounded-full uppercase tracking-[0.2em] font-sans font-bold border border-white/10">
                     {beforeLabel}
                 </span>
             </div>
-            <div className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <span className="bg-rose/90 backdrop-blur-md text-white text-[10px] sm:text-xs px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full uppercase tracking-widest font-bold border border-white/10">
+            <div className="absolute bottom-6 right-6 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                <span className="bg-aria-gold/90 backdrop-blur-md text-white text-[9px] px-4 py-1.5 rounded-full uppercase tracking-[0.2em] font-sans font-bold border border-white/10">
                     {afterLabel}
                 </span>
             </div>

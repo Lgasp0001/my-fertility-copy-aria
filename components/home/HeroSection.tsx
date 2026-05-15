@@ -1,10 +1,8 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import type { Variants } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { ChevronDown, MapPin, Star } from 'lucide-react';
-
 import Magnetic from '@/components/ui/Magnetic';
 
 interface HeroSectionProps {
@@ -28,18 +26,18 @@ export default function HeroSection({ onBookingClick }: HeroSectionProps) {
     }
   };
 
-  const titleWords = "Frosts Fertility Clinic".split(" ");
+  const titleWords = "Aria Fertility Clinic".split(" ");
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-hero-gradient">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-aria-beige">
       {/* Header Contrast Strip */}
-      <div className="absolute top-0 left-0 right-0 h-24 bg-white/90 backdrop-blur-md z-0" />
+      <div className="absolute top-0 left-0 right-0 h-24 bg-white/40 backdrop-blur-md z-0" />
 
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
+      <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
-          backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
-          backgroundSize: '40px 40px'
+          backgroundImage: 'radial-gradient(circle at 2px 2px, #72A9B5 1px, transparent 0)',
+          backgroundSize: '60px 60px'
         }} />
       </div>
 
@@ -50,28 +48,22 @@ export default function HeroSection({ onBookingClick }: HeroSectionProps) {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
-            className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-full mb-8 shadow-sm"
+            className="inline-flex items-center space-x-2 bg-aria-teal/5 backdrop-blur-md border border-aria-teal/10 px-6 py-2 rounded-full mb-8 shadow-sm"
           >
             <span className="flex">
-              {[...Array(4)].map((_, i) => (
-                <Star key={i} className="w-4 h-4 text-rose fill-rose" />
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="w-3 h-3 text-aria-gold fill-aria-gold" />
               ))}
-              <div className="relative">
-                <Star className="w-4 h-4 text-rose" />
-                <div className="absolute inset-0 overflow-hidden w-1/2">
-                  <Star className="w-4 h-4 text-rose fill-rose" />
-                </div>
-              </div>
             </span>
-            <span className="text-white text-sm font-medium tracking-wide uppercase">
-              One of Austin&apos;s most compassionate Fertility Experiences
+            <span className="text-aria-teal text-[10px] font-sans font-bold tracking-[0.2em] uppercase">
+              Bespoke Fertility Excellence in Marylebone
             </span>
           </motion.div>
 
           <motion.h1
             initial="hidden"
             animate="visible"
-            className="text-5xl md:text-7xl lg:text-9xl font-bold text-white mb-6 leading-[1.1] tracking-tighter text-balance flex flex-wrap justify-center gap-x-[0.2em]"
+            className="text-6xl md:text-8xl lg:text-[10rem] font-serif font-medium text-aria-teal mb-8 leading-[0.9] tracking-tight text-balance flex flex-wrap justify-center gap-x-[0.1em]"
           >
             {titleWords.map((word, i) => (
               <motion.span
@@ -81,7 +73,7 @@ export default function HeroSection({ onBookingClick }: HeroSectionProps) {
                   delay: i * 0.1,
                   duration: 0.8,
                 }}
-                className={word === "Clinic" ? "text-rose" : ""}
+                className={word === "Aria" ? "italic font-light" : ""}
               >
                 {word}
               </motion.span>
@@ -92,24 +84,24 @@ export default function HeroSection({ onBookingClick }: HeroSectionProps) {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="text-xl md:text-2xl text-gray-200 mb-10 max-w-3xl mx-auto leading-relaxed text-balance"
+            className="text-lg md:text-xl font-sans text-aria-dark mb-12 max-w-2xl mx-auto leading-relaxed text-balance font-light"
           >
-            Escape the clinical cold. Experience world-class care and gentle precision in our boutique South Congress studio, designed for your ultimate comfort.
+            Supporting you every step of the way with world-class expertise and compassionate care in our private Marylebone clinic.
           </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1 }}
-            className="flex flex-col items-center gap-6"
+            className="flex flex-col items-center gap-8"
           >
-            <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <Magnetic>
                 <motion.div whileTap={{ scale: 0.95 }}>
                   <Button
                     onClick={onBookingClick}
                     size="lg"
-                    className="bg-rose hover:bg-rose-600 text-white text-lg px-10 py-7 rounded-xl shadow-2xl hover:shadow-rose/20 transition-all font-semibold"
+                    className="bg-aria-teal hover:bg-aria-gold text-white text-xs tracking-[0.2em] uppercase px-12 py-8 rounded-full shadow-xl hover:shadow-aria-teal/20 transition-all font-bold"
                   >
                     Start Your Journey
                   </Button>
@@ -121,27 +113,24 @@ export default function HeroSection({ onBookingClick }: HeroSectionProps) {
                     onClick={scrollToTreatments}
                     size="lg"
                     variant="outline"
-                    className="bg-white/5 backdrop-blur-md border-white/20 text-white hover:bg-white/10 text-lg px-10 py-7 rounded-xl transition-all"
+                    className="bg-transparent border-aria-teal/20 text-aria-teal hover:bg-aria-teal hover:text-white text-xs tracking-[0.2em] uppercase px-12 py-8 rounded-full transition-all font-bold"
                   >
-                    Explore Our Services
+                    Explore Treatments
                   </Button>
                 </motion.div>
               </Magnetic>
             </div>
-            <p className="text-xs md:text-sm text-gray-200/80 font-medium tracking-wide">
-              Consultation covers history, tests, treatment options, costs & next steps
-            </p>
           </motion.div>
 
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="mt-12 flex flex-col items-center"
+            className="mt-16 flex flex-col items-center"
           >
-            <div className="flex items-center space-x-2 text-gray-300">
-              <MapPin className="w-4 h-4 text-rose" />
-              <p className="text-sm font-medium tracking-wide uppercase">Downtown Austin &amp; Westlake Studios • Compassionate Consultation</p>
+            <div className="flex items-center space-x-3 text-aria-gold/80">
+              <MapPin className="w-4 h-4" />
+              <p className="text-[10px] font-sans font-bold tracking-[0.3em] uppercase">Marylebone, London • Welbeck Way</p>
             </div>
           </motion.div>
         </div>
@@ -156,7 +145,7 @@ export default function HeroSection({ onBookingClick }: HeroSectionProps) {
           opacity: { delay: 1, duration: 0.5 },
           y: { repeat: Infinity, duration: 2, ease: 'easeInOut' },
         }}
-        className="absolute bottom-10 left-1/2 text-white/50 hover:text-white transition-colors"
+        className="absolute bottom-10 left-1/2 text-aria-teal/30 hover:text-aria-teal transition-colors"
         style={{ x: '-50%' }}
       >
         <ChevronDown className="w-10 h-10" />

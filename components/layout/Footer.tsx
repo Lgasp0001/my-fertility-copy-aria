@@ -22,85 +22,85 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-berry pt-24 pb-32 md:pb-24 relative overflow-hidden text-white">
+    <footer className="bg-aria-teal pt-24 pb-32 md:pb-24 relative overflow-hidden text-white">
       {/* Urgency Banner */}
-      <div className="bg-champagne text-berry py-3">
+      <div className="bg-aria-gold text-white py-3">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="font-semibold">
-            Compassionate Consultations - Limited New Patient Slots Available
+          <p className="font-sans font-bold uppercase tracking-widest text-[10px]">
+            Bespoke Care - Priority Consultations Available for New Patients
           </p>
         </div>
       </div>
 
       {/* Main Footer */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
           {/* Column 1: Brand */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
-            <Link href="/" className="flex flex-col items-center group mb-6">
-              <div className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center transform group-hover:scale-105 transition-all shadow-lg ring-4 ring-rose/5 mb-3">
-                <Heart className="w-7 h-7 text-rose" />
+            <Link href="/" className="flex flex-col items-center md:items-start group mb-8">
+              <div className="w-14 h-14 bg-white/10 rounded-full flex items-center justify-center transform group-hover:scale-105 transition-all shadow-lg ring-4 ring-aria-gold/10 mb-4">
+                <Heart className="w-8 h-8 text-aria-gold" />
               </div>
-              <div className="flex flex-col items-center">
-                <span className="text-xl font-bold leading-none uppercase tracking-tight">Frosts</span>
-                <span className="text-sm font-medium text-rose uppercase tracking-widest mt-1">Fertility Clinic</span>
+              <div className="flex flex-col items-center md:items-start">
+                <span className="text-2xl font-serif font-bold leading-none uppercase tracking-widest">Aria</span>
+                <span className="text-[10px] font-sans font-medium text-aria-gold uppercase tracking-[0.4em] mt-2">Fertility Clinic</span>
               </div>
             </Link>
-            <p className="text-gray-300 mb-4">
-              Modern care. Compassionate precision.
+            <p className="text-aria-beige/80 font-sans font-light text-sm leading-relaxed mb-6 max-w-xs">
+              World-class expertise meets compassionate care in the heart of London. Supporting you every step of the way.
             </p>
-            <div className="flex space-x-4">
+            <div className="flex space-x-5">
               <a
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-white/10 hover:bg-rose rounded-full flex items-center justify-center transition-colors"
+                className="w-10 h-10 border border-white/20 hover:bg-aria-gold hover:border-aria-gold rounded-full flex items-center justify-center transition-all"
               >
-                <Facebook className="w-5 h-5" />
+                <Facebook className="w-4 h-4" />
               </a>
               <a
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-white/10 hover:bg-rose rounded-full flex items-center justify-center transition-colors"
+                className="w-10 h-10 border border-white/20 hover:bg-aria-gold hover:border-aria-gold rounded-full flex items-center justify-center transition-all"
               >
-                <Instagram className="w-5 h-5" />
+                <Instagram className="w-4 h-4" />
               </a>
             </div>
           </div>
 
           {/* Column 2: Quick Links */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
+          <div className="flex flex-col items-center md:items-start">
+            <h3 className="text-xs font-sans font-bold uppercase tracking-[0.3em] text-aria-gold mb-8">Navigation</h3>
+            <ul className="space-y-4 text-center md:text-left">
               <li>
                 <button
                   onClick={() => handleNavClick('#treatments')}
-                  className="text-gray-300 hover:text-rose transition-colors"
+                  className="text-aria-beige/70 hover:text-white font-sans text-sm tracking-wide transition-colors"
                 >
-                  Services
+                  Treatments
                 </button>
               </li>
               <li>
                 <button
                   onClick={() => handleNavClick('#testimonials')}
-                  className="text-gray-300 hover:text-rose transition-colors"
+                  className="text-aria-beige/70 hover:text-white font-sans text-sm tracking-wide transition-colors"
                 >
-                  Testimonials
+                  Patient Stories
                 </button>
               </li>
               <li>
                 <button
                   onClick={() => handleNavClick('#faqs')}
-                  className="text-gray-300 hover:text-rose transition-colors"
+                  className="text-aria-beige/70 hover:text-white font-sans text-sm tracking-wide transition-colors"
                 >
-                  FAQs
+                  Support & FAQs
                 </button>
               </li>
               <li>
                 <Link
                   href="/contact"
-                  className="text-gray-300 hover:text-rose transition-colors"
+                  className="text-aria-beige/70 hover:text-white font-sans text-sm tracking-wide transition-colors"
                 >
                   Contact Us
                 </Link>
@@ -109,58 +109,62 @@ export default function Footer() {
           </div>
 
           {/* Column 3: Contact */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
-            <ul className="space-y-3">
-              <li className="flex items-start space-x-3">
-                <MapPin className="w-5 h-5 text-rose flex-shrink-0 mt-1" />
-                <span className="text-gray-300">
-                  2847 Willow Creek Drive
+          <div className="flex flex-col items-center md:items-start">
+            <h3 className="text-xs font-sans font-bold uppercase tracking-[0.3em] text-aria-gold mb-8">Location</h3>
+            <ul className="space-y-6">
+              <li className="flex flex-col items-center md:items-start space-y-2">
+                <div className="flex items-center space-x-3">
+                  <MapPin className="w-4 h-4 text-aria-gold" />
+                  <span className="font-sans font-semibold text-[10px] uppercase tracking-widest text-aria-gold">Address</span>
+                </div>
+                <span className="text-aria-beige/70 font-sans text-sm leading-relaxed text-center md:text-left">
+                  Welbeck Way, Marylebone
                   <br />
-                  Austin, TX 78701
+                  London, W1G 9YF
                 </span>
               </li>
-              <li className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-rose flex-shrink-0" />
+              <li className="flex flex-col items-center md:items-start space-y-2">
+                <div className="flex items-center space-x-3">
+                  <Phone className="w-4 h-4 text-aria-gold" />
+                  <span className="font-sans font-semibold text-[10px] uppercase tracking-widest text-aria-gold">Enquiries</span>
+                </div>
                 <a
-                  href="tel:5125550198"
-                  className="text-gray-300 hover:text-rose transition-colors"
+                  href="tel:+442032636025"
+                  className="text-aria-beige/70 hover:text-white font-sans text-sm transition-colors"
                 >
-                  (512) 555-0198
+                  +44 (0) 203 263 6025
                 </a>
               </li>
-              <li className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-rose flex-shrink-0" />
+              <li className="flex flex-col items-center md:items-start space-y-2">
+                <div className="flex items-center space-x-3">
+                  <Mail className="w-4 h-4 text-aria-gold" />
+                  <span className="font-sans font-semibold text-[10px] uppercase tracking-widest text-aria-gold">Email</span>
+                </div>
                 <a
-                  href="mailto:hello@frostsfertility.com"
-                  className="text-gray-300 hover:text-rose transition-colors"
+                  href="mailto:admin@ariafertility.co.uk"
+                  className="text-aria-beige/70 hover:text-white font-sans text-sm transition-colors"
                 >
-                  hello@frostsfertility.com
+                  admin@ariafertility.co.uk
                 </a>
               </li>
             </ul>
-            <div className="mt-4 text-sm text-gray-400">
-              <p>Mon-Fri: 8:00 AM - 7:00 PM</p>
-              <p>Saturday: 9:00 AM - 4:00 PM</p>
-              <p>Sunday: Closed</p>
-            </div>
           </div>
         </div>
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      <div className="border-t border-white/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-sm text-gray-400">
-              © {new Date().getFullYear()} Frosts Fertility Clinic. Compassionate Reproductive Care. Serving the Austin community for over 20 years.
+            <p className="text-[10px] font-sans font-light tracking-widest text-aria-beige/40">
+              © {new Date().getFullYear()} ARIA FERTILITY CLINIC. ALL RIGHTS RESERVED.
             </p>
-            <div className="flex flex-wrap justify-center items-center gap-4 text-xs text-gray-400">
-              <span>NPI: 9876543210</span>
-              <span className="hidden md:inline">|</span>
-              <span>Member of ASRM</span>
-              <span className="hidden md:inline">|</span>
-              <span>Texas Fertility Society</span>
+            <div className="flex flex-wrap justify-center items-center gap-6 text-[10px] font-sans font-bold tracking-[0.2em] text-aria-gold/60 uppercase">
+              <span>HFEA Licensed</span>
+              <span className="hidden md:inline text-white/10">|</span>
+              <span>ISO 9001 Certified</span>
+              <span className="hidden md:inline text-white/10">|</span>
+              <span>Marylebone Health District</span>
             </div>
           </div>
         </div>

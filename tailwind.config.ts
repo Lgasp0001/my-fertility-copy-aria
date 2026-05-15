@@ -10,44 +10,12 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        berry: {
-          DEFAULT: '#5D3E63',
-          50: '#F5F2F7',
-          100: '#EBE5EF',
-          200: '#D7CADF',
-          300: '#C2B0CF',
-          400: '#AE95C0',
-          500: '#5D3E63',
-          600: '#523758',
-          700: '#462F4C',
-          800: '#3B2740',
-          900: '#2F1F33',
-        },
-        rose: {
-          DEFAULT: '#F4B8B8',
-          50: '#FFF7F7',
-          100: '#FFEDED',
-          200: '#FEDADA',
-          300: '#FDC6C6',
-          400: '#FBB3B3',
-          500: '#F4B8B8',
-          600: '#DBA6A6',
-          700: '#C39393',
-          800: '#AA8181',
-          900: '#926E6E',
-        },
-        champagne: {
-          DEFAULT: '#F5E6DA',
-          50: '#FDFBFA',
-          100: '#FBF7F5',
-          200: '#F7EDEA',
-          300: '#F3E4DF',
-          400: '#EFDAD5',
-          500: '#F5E6DA',
-          600: '#DDD0C4',
-          700: '#C4B8AE',
-          800: '#ABA199',
-          900: '#918983',
+        aria: {
+          teal: '#72A9B5',
+          gold: '#C9B07D',
+          beige: '#F2F0ED',
+          dark: '#7A7A7A',
+          white: '#FFFFFF',
         },
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
@@ -91,11 +59,11 @@ const config: Config = {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        'hero-gradient': 'linear-gradient(135deg, #5D3E63 0%, #724E7A 100%)',
+        'hero-gradient': 'linear-gradient(135deg, #7A7A7A 0%, #F2F0ED 100%)',
       },
       boxShadow: {
-        'glass': '0 8px 32px 0 rgba(93, 62, 99, 0.15)',
-        'glass-hover': '0 12px 48px 0 rgba(93, 62, 99, 0.25)',
+        'glass': '0 8px 32px 0 rgba(114, 169, 181, 0.15)',
+        'glass-hover': '0 12px 48px 0 rgba(114, 169, 181, 0.25)',
       },
       keyframes: {
         'accordion-down': {
@@ -122,7 +90,8 @@ const config: Config = {
         'slide-in': 'slide-in 0.3s ease-out',
       },
       fontFamily: {
-        sans: ['var(--font-geist-sans)', 'system-ui', 'sans-serif'],
+        sans: ['var(--font-sans)', 'system-ui', 'sans-serif'],
+        serif: ['var(--font-serif)', 'serif'],
       },
     },
   },

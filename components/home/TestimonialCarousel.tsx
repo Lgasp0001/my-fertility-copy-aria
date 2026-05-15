@@ -31,80 +31,80 @@ export default function TestimonialCarousel() {
   };
 
   return (
-    <section id="testimonials" className="py-20 bg-white overflow-hidden">
+    <section id="testimonials" className="py-24 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-20"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-berry mb-4">
-            Real Success Stories
+          <h2 className="text-4xl md:text-6xl font-serif font-medium text-aria-teal mb-6 tracking-tight">
+            Success Stories
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Experience the journey through the eyes of the families whose lives have been transformed by our boutique fertility care.
+          <p className="text-xl font-sans text-aria-dark max-w-3xl mx-auto leading-relaxed font-light">
+            Bespoke journeys shared by families who entrusted us with their care in Marylebone.
           </p>
         </motion.div>
 
-        <div className="max-w-4xl mx-auto">
-          <Card className="relative overflow-hidden shadow-2xl border-none bg-gray-50/50 backdrop-blur-sm">
-            <CardContent className="p-8 md:p-12">
-              <Quote className="absolute top-8 left-8 w-16 h-16 text-rose/10" />
+        <div className="max-w-5xl mx-auto">
+          <Card className="relative overflow-hidden shadow-2xl border-none bg-aria-beige/20 backdrop-blur-sm rounded-[3rem]">
+            <CardContent className="p-12 md:p-20">
+              <Quote className="absolute top-12 left-12 w-24 h-24 text-aria-gold/5" />
 
               <motion.div
                 key={currentIndex}
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -50 }}
-                transition={{ duration: 0.4, ease: "easeOut" }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
                 drag="x"
                 dragConstraints={{ left: 0, right: 0 }}
                 onDragEnd={handleDragEnd}
                 className="relative z-10 cursor-grab active:cursor-grabbing"
               >
-                <div className="flex justify-center mb-6">
+                <div className="flex justify-center mb-10 gap-1.5">
                   {[...Array(5)].map((_, i) => (
                     <Star
                       key={i}
-                      className="w-6 h-6 text-rose fill-rose"
+                      className="w-5 h-5 text-aria-gold fill-aria-gold"
                     />
                   ))}
                 </div>
 
-                <blockquote className="text-xl md:text-3xl text-berry text-center mb-8 leading-relaxed font-medium italic">
+                <blockquote className="text-2xl md:text-4xl font-serif font-medium text-aria-teal text-center mb-12 leading-relaxed italic">
                   &ldquo;{currentTestimonial.text}&rdquo;
                 </blockquote>
 
                 <div className="text-center">
-                  <p className="font-bold text-berry text-xl mb-1">
+                  <p className="font-serif font-bold text-aria-teal text-2xl mb-2">
                     {currentTestimonial.name}
                   </p>
-                  <p className="text-rose font-semibold tracking-wide uppercase text-sm">
+                  <p className="text-aria-gold font-sans font-bold tracking-[0.2em] uppercase text-[10px]">
                     {currentTestimonial.treatment}
                   </p>
                 </div>
               </motion.div>
             </CardContent>
 
-            {/* Navigation Arrows - Hidden on mobile for better UX with swiping */}
-            <div className="hidden md:block absolute top-1/2 left-4 transform -translate-y-1/2">
+            {/* Navigation Arrows */}
+            <div className="hidden md:block absolute top-1/2 left-8 transform -translate-y-1/2">
               <Button
                 onClick={prevTestimonial}
                 variant="ghost"
                 size="icon"
-                className="bg-white/80 backdrop-blur-sm hover:bg-white shadow-lg rounded-full"
+                className="bg-white/50 backdrop-blur-md hover:bg-white text-aria-teal shadow-xl rounded-full w-12 h-12"
               >
                 <ChevronLeft className="w-6 h-6" />
               </Button>
             </div>
-            <div className="hidden md:block absolute top-1/2 right-4 transform -translate-y-1/2">
+            <div className="hidden md:block absolute top-1/2 right-8 transform -translate-y-1/2">
               <Button
                 onClick={nextTestimonial}
                 variant="ghost"
                 size="icon"
-                className="bg-white/80 backdrop-blur-sm hover:bg-white shadow-lg rounded-full"
+                className="bg-white/50 backdrop-blur-md hover:bg-white text-aria-teal shadow-xl rounded-full w-12 h-12"
               >
                 <ChevronRight className="w-6 h-6" />
               </Button>
@@ -112,14 +112,14 @@ export default function TestimonialCarousel() {
           </Card>
 
           {/* Dots Indicator */}
-          <div className="flex justify-center mt-10 space-x-3">
+          <div className="flex justify-center mt-12 space-x-4">
             {displayTestimonials.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentIndex(index)}
-                className={`h-2.5 rounded-full transition-all duration-300 ${index === currentIndex
-                  ? 'bg-rose w-10'
-                  : 'bg-gray-300 hover:bg-gray-400 w-2.5'
+                className={`h-1.5 rounded-full transition-all duration-500 ${index === currentIndex
+                  ? 'bg-aria-gold w-12'
+                  : 'bg-aria-teal/10 hover:bg-aria-teal/20 w-4'
                   }`}
                 aria-label={`Go to testimonial ${index + 1}`}
               />

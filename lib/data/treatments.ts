@@ -19,18 +19,18 @@ export const treatments: Treatment[] = [
     name: 'Fertility Consultations',
     slug: 'fertility-consultations',
     icon: 'Activity',
-    shortDescription: 'Compassionate guidance to understand your reproductive health and start your journey.',
-    fullDescription: 'Our fertility consultations provide a comprehensive overview of your reproductive health. From initial assessments and hormone testing to personalized treatment plans, we offer a supportive environment to discuss your goals and options. Whether you are just starting or looking for advanced solutions, we are here to guide you every step of the way.',
+    shortDescription: 'Bespoke guidance to understand your reproductive health and start your journey.',
+    fullDescription: 'Our fertility consultations provide a comprehensive overview of your reproductive health in our private Marylebone clinic. From initial assessments and hormone testing to personalized treatment plans, we offer a supportive environment to discuss your goals and options. Whether you are just starting or looking for advanced solutions, our expert team is here to guide you every step of the way.',
     benefits: [
       'Personalized reproductive health assessment',
-      'One-on-one time with fertility specialists',
+      'One-on-one time with world-leading specialists',
       'Comprehensive hormone & diagnostic testing',
       'Clear roadmap for your family-building journey',
-      'Supportive and empathetic clinical team',
-      'Convenient Austin & Westlake locations'
+      'Private and discrete Marylebone clinic',
+      'Supportive and empathetic clinical team'
     ],
-    priceRange: '$150 - $350',
-    priceStarting: '$150',
+    priceRange: '£200 - £450',
+    priceStarting: '£200',
     duration: '45-60 minutes',
     recovery: 'None - return to normal activities immediately',
     howItWorks: [
@@ -46,18 +46,18 @@ export const treatments: Treatment[] = [
     name: 'In Vitro Fertilization (IVF)',
     slug: 'ivf',
     icon: 'Heart',
-    shortDescription: 'Advanced reproductive technology to help you conceive and build your family.',
-    fullDescription: 'IVF is a highly effective fertility treatment that involves combining eggs and sperm in a specialized laboratory setting. Our state-of-the-art IVF program combines medical precision with compassionate care to optimize your chances of success. From ovarian stimulation to embryo transfer, we provide expert monitoring and support throughout the entire process.',
+    shortDescription: 'World-class reproductive technology to help you conceive and build your family.',
+    fullDescription: 'IVF is a highly effective fertility treatment that involves combining eggs and sperm in our state-of-the-art Marylebone laboratory. Our IVF program combines medical precision with compassionate care to optimize your chances of success. From ovarian stimulation to embryo transfer, we provide expert monitoring and support throughout the entire process.',
     benefits: [
-      'Highest success rates for many fertility challenges',
+      'High success rates with personalized protocols',
       'Advanced laboratory technology & techniques',
       'Personalized stimulation protocols',
       'Option for genetic screening (PGT)',
       'Expert embryology and clinical teams',
       'Compassionate support programs'
     ],
-    priceRange: '$12,000 - $18,000',
-    priceStarting: '$199/month with financing options',
+    priceRange: '£4,500 - £8,000',
+    priceStarting: '£4,500',
     duration: '4-6 weeks per cycle',
     recovery: '1-2 days after egg retrieval',
     howItWorks: [
@@ -74,8 +74,8 @@ export const treatments: Treatment[] = [
     name: 'Egg Freezing',
     slug: 'egg-freezing',
     icon: 'Sparkles',
-    shortDescription: 'Preserve your future options with advanced cryopreservation technology.',
-    fullDescription: 'Egg freezing, or oocyte cryopreservation, allows you to preserve your fertility for the future. Whether for personal, medical, or professional reasons, freezing your eggs at their current quality can provide peace of mind and flexibility. Our boutique program focuses on your comfort and provides the highest standards of care in egg harvesting and storage.',
+    shortDescription: 'Preserve your future options with advanced cryopreservation technology in London.',
+    fullDescription: 'Egg freezing allows you to preserve your fertility for the future. Whether for personal, medical, or professional reasons, freezing your eggs at their current quality can provide peace of mind and flexibility. Our bespoke program focuses on your comfort and provides the highest standards of care in egg harvesting and storage in the heart of Marylebone.',
     benefits: [
       'Preserve younger, healthier eggs',
       'Greater flexibility in family planning',
@@ -84,8 +84,8 @@ export const treatments: Treatment[] = [
       'Short, manageable treatment cycle',
       'Long-term secure storage options'
     ],
-    priceRange: '$6,000 - $10,000',
-    priceStarting: '$6,000',
+    priceRange: '£3,500 - £5,500',
+    priceStarting: '£3,500',
     duration: '10-14 days for stimulation',
     recovery: '1-2 days after retrieval',
     howItWorks: [
@@ -102,7 +102,7 @@ export const treatments: Treatment[] = [
     slug: 'diagnostic-testing',
     icon: 'Sun',
     shortDescription: 'Comprehensive insights into your fertility health with precise diagnostics.',
-    fullDescription: 'Understanding the "why" is the first step toward the "how." Our diagnostic testing services include semen analysis, ovarian reserve testing (AMH), tubal patency assessments (HSG), and carrier screening. We use the latest diagnostic technology to provide accurate and timely results, giving you the clarity you need to make informed decisions about your fertility journey.',
+    fullDescription: 'Understanding your fertility health is the first step. Our diagnostic services include semen analysis, ovarian reserve testing (AMH), and tubal patency assessments. We use the latest diagnostic technology to provide accurate results, giving you the clarity you need to make informed decisions.',
     benefits: [
       'Clarity on potential fertility challenges',
       'Testing for both partners available',
@@ -111,8 +111,8 @@ export const treatments: Treatment[] = [
       'Minimally invasive diagnostic procedures',
       'Detailed review meeting with a specialist'
     ],
-    priceRange: '$200 - $800',
-    priceStarting: '$200',
+    priceRange: '£150 - £800',
+    priceStarting: '£150',
     duration: 'Varies by test (30-60 minutes)',
     recovery: 'Minimal - most tests require no downtime',
     howItWorks: [
@@ -129,7 +129,7 @@ export const treatments: Treatment[] = [
     slug: 'sperm-health-donation',
     icon: 'Shield',
     shortDescription: 'Specialized services for male fertility and donor sperm integration.',
-    fullDescription: 'We offer comprehensive male fertility services, including advanced semen analysis, sperm DNA fragmentation testing, and coordination with reputable sperm banks. Whether you are optimizing your own sperm health or utilizing donor sperm to build your family, our team provides the expertise and discretion you deserve.',
+    fullDescription: 'We offer comprehensive male fertility services, including advanced semen analysis and coordination with reputable sperm banks. Whether you are optimizing your own sperm health or utilizing donor sperm, our team provides the expertise and discretion you deserve.',
     benefits: [
       'In-depth analysis of male fertility factors',
       'Expert coordination with top donor banks',
@@ -138,8 +138,8 @@ export const treatments: Treatment[] = [
       'Guidance for LGBTQ+ families & single parents',
       'Integrated care for both partners'
     ],
-    priceRange: '$150 - $1,500',
-    priceStarting: '$150',
+    priceRange: '£150 - £1,500',
+    priceStarting: '£150',
     duration: '30-45 minutes for analysis',
     recovery: 'None',
     howItWorks: [
@@ -152,38 +152,11 @@ export const treatments: Treatment[] = [
   },
   {
     id: '6',
-    name: 'Genetic Screening',
-    slug: 'genetic-screening',
-    icon: 'Award',
-    shortDescription: 'Ensuring the healthiest start with advanced embryo and carrier testing.',
-    fullDescription: 'Our genetic screening services provide peace of mind by identifying potential genetic conditions before or during pregnancy. We offer Preimplantation Genetic Testing (PGT) for embryos during the IVF process, as well as comprehensive carrier screening for parents. These advanced technologies help ensure the healthiest possible start for your future child.',
-    benefits: [
-      'Reduce the risk of genetic conditions',
-      'Increase IVF success rates',
-      'Lower the chance of miscarriage',
-      'Informed decision-making for parents',
-      'Highest accuracy screening technology',
-      'Personalized genetic counseling included'
-    ],
-    priceRange: '$1,500 - $5,000',
-    priceStarting: '$1,500',
-    duration: 'Varies (1-2 weeks for lab results)',
-    recovery: 'None for parents; biopsy occurs in lab',
-    howItWorks: [
-      'Initial genetic counseling session',
-      'Sample collection (blood/saliva) for parents',
-      'Optional embryo biopsy during IVF cycle',
-      'Advanced chromosomal/genetic analysis',
-      'Review of results with clinical team'
-    ]
-  },
-  {
-    id: '7',
     name: 'IUI (Intrauterine Insemination)',
     slug: 'iui',
     icon: 'Link',
     shortDescription: 'A gentle, effective first step for many on their fertility journey.',
-    fullDescription: 'IUI is a less invasive fertility treatment that involves placing prepared sperm directly into the uterus during ovulation. Often referred to as artificial insemination, it is a recommended first step for many couples and individuals. Our team provides precise cycle monitoring and timing to optimize the success of each IUI procedure.',
+    fullDescription: 'IUI is a less invasive fertility treatment that involves placing prepared sperm directly into the uterus during ovulation. Often referred to as artificial insemination, it is a recommended first step for many. Our team provides precise cycle monitoring to optimize success.',
     benefits: [
       'Less invasive than IVF',
       'More affordable fertility option',
@@ -192,8 +165,8 @@ export const treatments: Treatment[] = [
       'Minimal downtime or side effects',
       'Excellent first-step treatment'
     ],
-    priceRange: '$800 - $2,500',
-    priceStarting: '$800',
+    priceRange: '£800 - £1,500',
+    priceStarting: '£800',
     duration: '15-20 minutes for procedure',
     recovery: 'None - immediate return to activity',
     howItWorks: [
@@ -202,33 +175,6 @@ export const treatments: Treatment[] = [
       'Sperm preparation and "washing"',
       'Simple intrauterine insemination procedure',
       'Follow-up and support'
-    ]
-  },
-  {
-    id: '8',
-    name: 'Wellness & Support',
-    slug: 'wellness-support',
-    icon: 'Heart',
-    shortDescription: 'Holistic care for your mind and body throughout your treatment.',
-    fullDescription: 'We believe that fertility care should address the whole person. Our wellness and support services include fertility acupuncture, nutritional counseling, and specialized therapy. We provide the emotional and physical support necessary to navigate the complexities of fertility treatment with resilience and hope.',
-    benefits: [
-      'Reduced stress and anxiety',
-      'Optimized physical health for conception',
-      'Specialized fertility acupuncture',
-      'Professional emotional support',
-      'Holistic approach to family building',
-      'Support groups and community'
-    ],
-    priceRange: '$100 - $300 per session',
-    priceStarting: '$100',
-    duration: '45-60 minutes',
-    recovery: 'None - relaxing and restorative',
-    howItWorks: [
-      'Initial wellness assessment',
-      'Individualized support plan',
-      'Scheduling of acupuncture or counseling',
-      'Ongoing integration with medical treatment',
-      'Continued support after success'
     ]
   }
 ];

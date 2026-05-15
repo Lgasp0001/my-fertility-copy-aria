@@ -48,22 +48,22 @@ export default function ContactPage() {
     {
       question: 'What are your clinic hours?',
       answer:
-        'We are open Monday to Friday from 8:00 AM to 7:00 PM, and Saturdays from 9:00 AM to 4:00 PM. We are closed on Sundays. We offer flexible appointment times to fit your schedule.',
+        'Our Marylebone clinic is open Monday to Friday from 8:00 AM to 7:00 PM. We also offer Saturday appointments from 9:00 AM to 4:00 PM for your convenience. We are closed on Sundays.',
     },
     {
-      question: 'Do you offer fertility financing?',
+      question: 'Do you offer personalized pathways?',
       answer:
-        'Yes, we provide several flexible financing options for our pathways, including preservation and IVF packages. Our care coordinators can help you find a plan that works for you.',
+        'Yes, every patient receives a bespoke fertility roadmap. We provide several flexible options for our pathways, including preservation and IVF packages tailored to your specific needs.',
     },
     {
       question: 'How quickly can I get an initial consultation?',
       answer:
-        'We typically have availability for initial private consultations within 48 to 72 hours. Please contact us or use our online booking tool to check specific times.',
+        'We typically have availability for private consultations at our London clinic within 24 to 48 hours. Please contact us or use our online booking tool to check specific times.',
     },
     {
       question: 'Is my information kept confidential?',
       answer:
-        'Absolutely. Privacy and discretion are at the heart of our boutique approach. All your data and conversations are strictly confidential and protected by the highest medical standards.',
+        'Absolutely. Discrete care and privacy are at the heart of our bespoke approach. All your data and conversations are strictly confidential and protected by the highest medical standards in the UK.',
     },
   ];
 
@@ -73,13 +73,20 @@ export default function ContactPage() {
 
       <main className="min-h-screen pt-20">
         {/* Hero Section */}
-        <section className="bg-hero-gradient py-20">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="bg-aria-teal py-24 relative overflow-hidden">
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute inset-0" style={{
+              backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
+              backgroundSize: '40px 40px'
+            }} />
+          </div>
+
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <button
               onClick={() => router.push('/')}
-              className="flex items-center space-x-2 text-white/80 hover:text-white mb-8 transition-colors"
+              className="flex items-center space-x-2 text-white/60 hover:text-white mb-10 transition-colors font-sans font-bold uppercase tracking-widest text-[10px]"
             >
-              <ArrowLeft className="w-5 h-5" />
+              <ArrowLeft className="w-4 h-4" />
               <span>Back to Home</span>
             </button>
 
@@ -88,21 +95,20 @@ export default function ContactPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              <h1 className="text-5xl md:text-7xl font-serif font-medium text-white mb-8 tracking-tight">
                 Get In Touch
               </h1>
-              <p className="text-2xl text-gray-200">
-                Have questions? We&apos;re here to help. Reach out to our friendly
-                team today.
+              <p className="text-xl md:text-2xl font-sans font-light text-aria-beige/80 leading-relaxed max-w-2xl">
+                Have questions about your journey? Our specialist team in Marylebone is here to provide expert support and guidance.
               </p>
             </motion.div>
           </div>
         </section>
 
         {/* Contact Information & Form */}
-        <section className="py-16 bg-gray-50">
+        <section className="py-24 bg-aria-beige/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
               {/* Contact Information */}
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
@@ -110,56 +116,64 @@ export default function ContactPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
               >
-                <h2 className="text-3xl font-bold text-berry mb-6 tracking-tight">
+                <h2 className="text-3xl font-serif font-medium text-aria-teal mb-10 tracking-tight">
                   Visit Our Clinic
                 </h2>
 
-                <div className="space-y-6 mb-8">
-                  <div className="flex items-start space-x-4">
-                    <MapPin className="w-6 h-6 text-rose flex-shrink-0 mt-1" />
+                <div className="space-y-10 mb-12">
+                  <div className="flex items-start space-x-6">
+                    <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md flex-shrink-0">
+                      <MapPin className="w-5 h-5 text-aria-gold" />
+                    </div>
                     <div>
-                      <h3 className="font-semibold text-berry mb-1">Address</h3>
-                      <p className="text-gray-600">
-                        2847 Willow Creek Drive
+                      <h3 className="font-sans font-bold text-[10px] uppercase tracking-widest text-aria-gold mb-2">London Address</h3>
+                      <p className="text-aria-dark/80 font-sans font-light leading-relaxed">
+                        Welbeck Way, Marylebone
                         <br />
-                        Austin, TX 78701
+                        London, W1G 9YF
                       </p>
                     </div>
                   </div>
 
-                  <div className="flex items-start space-x-4">
-                    <Phone className="w-6 h-6 text-rose flex-shrink-0 mt-1" />
+                  <div className="flex items-start space-x-6">
+                    <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md flex-shrink-0">
+                      <Phone className="w-5 h-5 text-aria-gold" />
+                    </div>
                     <div>
-                      <h3 className="font-semibold text-berry mb-1">Phone</h3>
+                      <h3 className="font-sans font-bold text-[10px] uppercase tracking-widest text-aria-gold mb-2">Enquiries</h3>
                       <a
-                        href="tel:5125550198"
-                        className="text-berry hover:text-rose transition-colors"
+                        href="tel:+442032636025"
+                        className="text-aria-teal hover:text-aria-gold font-sans font-medium transition-colors"
                       >
-                        (512) 555-0198
+                        +44 (0) 203 263 6025
                       </a>
                     </div>
                   </div>
 
-                  <div className="flex items-start space-x-4">
-                    <Mail className="w-6 h-6 text-rose flex-shrink-0 mt-1" />
+                  <div className="flex items-start space-x-6">
+                    <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md flex-shrink-0">
+                      <Mail className="w-5 h-5 text-aria-gold" />
+                    </div>
                     <div>
-                      <h3 className="font-semibold text-berry mb-1">Email</h3>
+                      <h3 className="font-sans font-bold text-[10px] uppercase tracking-widest text-aria-gold mb-2">Direct Email</h3>
                       <a
-                        href="mailto:hello@frostsfertility.com"
-                        className="text-berry hover:text-rose transition-colors"
+                        href="mailto:admin@ariafertility.co.uk"
+                        className="text-aria-teal hover:text-aria-gold font-sans font-medium transition-colors"
                       >
-                        hello@frostsfertility.com
+                        admin@ariafertility.co.uk
                       </a>
                     </div>
                   </div>
 
-                  <div className="flex items-start space-x-4">
-                    <Clock className="w-6 h-6 text-rose flex-shrink-0 mt-1" />
+                  <div className="flex items-start space-x-6">
+                    <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md flex-shrink-0">
+                      <Clock className="w-5 h-5 text-aria-gold" />
+                    </div>
                     <div>
-                      <h3 className="font-semibold text-berry mb-1">
+                      <h3 className="font-sans font-bold text-[10px] uppercase tracking-widest text-aria-gold mb-2">
                         Clinic Hours
                       </h3>
-                      <div className="text-gray-600">
+                      <div className="text-aria-dark/80 font-sans font-light leading-relaxed">
                         <p>Monday - Friday: 8:00 AM - 7:00 PM</p>
                         <p>Saturday: 9:00 AM - 4:00 PM</p>
                         <p>Sunday: Closed</p>
@@ -169,21 +183,20 @@ export default function ContactPage() {
                 </div>
 
                 {/* Emergency Notice */}
-                <Card className="bg-rose/5 border-rose/20">
-                  <CardContent className="p-6">
-                    <h3 className="font-semibold text-berry mb-2">
-                      Need Immediate Care?
+                <Card className="bg-aria-teal/5 border-aria-teal/10 rounded-[2rem] overflow-hidden">
+                  <CardContent className="p-10">
+                    <h3 className="font-serif font-medium text-aria-teal text-xl mb-4">
+                      Priority Enquiries
                     </h3>
-                    <p className="text-gray-600 mb-4">
-                      We prioritize urgent consultations. Call us before 10 AM for
-                      priority scheduling.
+                    <p className="text-aria-dark/70 font-sans font-light mb-8 leading-relaxed">
+                      We prioritize initial consultations for new patients. Contact us today to secure your private assessment.
                     </p>
                     <a
-                      href="tel:5125550198"
-                      className="inline-flex items-center space-x-2 font-semibold text-berry hover:text-rose transition-colors"
+                      href="tel:+442032636025"
+                      className="inline-flex items-center space-x-3 font-sans font-bold text-[10px] uppercase tracking-widest text-aria-teal hover:text-aria-gold transition-colors"
                     >
-                      <Phone className="w-5 h-5 text-rose" />
-                      <span>(512) 555-0198</span>
+                      <Phone className="w-4 h-4 text-aria-gold" />
+                      <span>+44 (0) 203 263 6025</span>
                     </a>
                   </CardContent>
                 </Card>
@@ -197,10 +210,10 @@ export default function ContactPage() {
                 transition={{ duration: 0.6 }}
               >
                 {!isSubmitted ? (
-                  <Card>
-                    <CardContent className="p-8">
-                      <h2 className="text-2xl font-bold text-berry mb-6">
-                        Send Us a Message
+                  <Card className="rounded-[3rem] border-aria-teal/5 shadow-2xl shadow-aria-teal/5 overflow-hidden bg-white">
+                    <CardContent className="p-12 md:p-16">
+                      <h2 className="text-3xl font-serif font-medium text-aria-teal mb-10">
+                        Send an Enquiry
                       </h2>
 
                       {(() => {
@@ -208,9 +221,9 @@ export default function ContactPage() {
                         const isFormValid = formData.name.trim() !== '' && isEmailValid && formData.phone.trim() !== '' && formData.message.trim() !== '';
 
                         return (
-                          <form onSubmit={handleSubmit} className="space-y-6">
+                          <form onSubmit={handleSubmit} className="space-y-8">
                             <div>
-                              <Label htmlFor="name">Full Name</Label>
+                              <Label htmlFor="name" className="text-[10px] font-sans font-bold uppercase tracking-widest text-aria-dark/50 ml-4 mb-2 block">Full Name</Label>
                               <Input
                                 id="name"
                                 required
@@ -218,13 +231,13 @@ export default function ContactPage() {
                                 onChange={(e) =>
                                   setFormData({ ...formData, name: e.target.value })
                                 }
-                                placeholder="John Doe"
-                                className="mt-1"
+                                placeholder="Name"
+                                className="rounded-full px-8 py-6 border-aria-teal/10 focus:ring-4 focus:ring-aria-teal/5 transition-all font-sans font-light"
                               />
                             </div>
 
                             <div>
-                              <Label htmlFor="email" className={!isEmailValid && formData.email !== '' ? 'text-red-500' : ''}>
+                              <Label htmlFor="email" className={`text-[10px] font-sans font-bold uppercase tracking-widest ml-4 mb-2 block ${!isEmailValid && formData.email !== '' ? 'text-red-400' : 'text-aria-dark/50'}`}>
                                 Email Address
                               </Label>
                               <Input
@@ -238,19 +251,16 @@ export default function ContactPage() {
                                     email: e.target.value,
                                   })
                                 }
-                                placeholder="john@example.com"
-                                className={`mt-1 transition-colors ${!isEmailValid && formData.email !== ''
-                                  ? 'border-red-500 focus-visible:ring-red-500'
-                                  : ''
+                                placeholder="email@example.com"
+                                className={`rounded-full px-8 py-6 transition-all font-sans font-light border-aria-teal/10 ${!isEmailValid && formData.email !== ''
+                                  ? 'border-red-300 focus:ring-red-50'
+                                  : 'focus:ring-4 focus:ring-aria-teal/5'
                                   }`}
                               />
-                              {!isEmailValid && formData.email !== '' && (
-                                <p className="text-red-500 text-xs mt-1">Please include an &apos;@&apos; in the email address.</p>
-                              )}
                             </div>
 
                             <div>
-                              <Label htmlFor="phone">Phone Number</Label>
+                              <Label htmlFor="phone" className="text-[10px] font-sans font-bold uppercase tracking-widest text-aria-dark/50 ml-4 mb-2 block">Phone Number</Label>
                               <Input
                                 id="phone"
                                 type="tel"
@@ -262,13 +272,13 @@ export default function ContactPage() {
                                     phone: e.target.value,
                                   })
                                 }
-                                placeholder="(512) 555-0123"
-                                className="mt-1"
+                                placeholder="+44"
+                                className="rounded-full px-8 py-6 border-aria-teal/10 focus:ring-4 focus:ring-aria-teal/5 transition-all font-sans font-light"
                               />
                             </div>
 
                             <div>
-                              <Label htmlFor="message">Message</Label>
+                              <Label htmlFor="message" className="text-[10px] font-sans font-bold uppercase tracking-widest text-aria-dark/50 ml-4 mb-2 block">Enquiry</Label>
                               <Textarea
                                 id="message"
                                 required
@@ -279,24 +289,24 @@ export default function ContactPage() {
                                     message: e.target.value,
                                   })
                                 }
-                                placeholder="How can we help you?"
-                                rows={5}
-                                className="mt-1"
+                                placeholder="How can we support you?"
+                                rows={4}
+                                className="rounded-[2rem] px-8 py-6 border-aria-teal/10 focus:ring-4 focus:ring-aria-teal/5 transition-all font-sans font-light"
                               />
                             </div>
 
-                            <p className="text-sm text-gray-500 text-center italic mb-4">
-                              A fertility consultation covers your history, tests, treatment options, costs, and next steps. Our team will contact you within 48 hours to guide your next steps.
+                            <p className="text-[11px] font-sans text-aria-dark/40 text-center italic leading-relaxed">
+                              Your privacy is our priority. We will contact you within 24 hours to discuss your next steps.
                             </p>
 
                             <Button
                               type="submit"
-                              className={`w-full py-6 text-lg transition-all duration-300 font-bold ${isFormValid
-                                ? 'bg-rose hover:bg-rose-600 text-white shadow-lg shadow-rose/20 scale-[1.02]'
-                                : 'bg-rose/40 cursor-not-allowed text-white/90'
+                              className={`w-full py-8 rounded-full text-xs font-sans font-bold uppercase tracking-[0.2em] transition-all duration-500 ${isFormValid
+                                ? 'bg-aria-teal hover:bg-aria-gold text-white shadow-xl shadow-aria-teal/20 scale-[1.02]'
+                                : 'bg-aria-teal/20 cursor-not-allowed text-white/50'
                                 }`}
                             >
-                              Send Message
+                              Send Enquiry
                             </Button>
                           </form>
                         );
@@ -304,30 +314,32 @@ export default function ContactPage() {
                     </CardContent>
                   </Card>
                 ) : (
-                  <Card>
-                    <CardContent className="p-8 text-center">
-                      <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <CheckCircle className="w-12 h-12 text-green-600" />
+                  <Card className="rounded-[3.5rem] border-aria-teal/5 shadow-2xl shadow-aria-teal/5 overflow-hidden bg-white">
+                    <CardContent className="p-16 md:p-24 text-center">
+                      <div className="w-20 h-20 bg-aria-teal/5 rounded-full flex items-center justify-center mx-auto mb-10">
+                        <CheckCircle className="w-10 h-10 text-aria-gold" />
                       </div>
 
-                      <h2 className="text-3xl font-bold text-berry mb-4">
-                        Message Sent Successfully!
+                      <h2 className="text-3xl md:text-4xl font-serif font-medium text-aria-teal mb-6">
+                        Enquiry Sent
                       </h2>
 
-                      <p className="text-gray-600 mb-6">
-                        Thank you for contacting us, {formData.name}. Our team
-                        will review your message and get back to you within 48
-                        hours.
+                      <p className="text-lg font-sans font-light text-aria-dark/70 mb-12 max-w-md mx-auto leading-relaxed">
+                        Thank you, {formData.name}. Our specialist team will review your enquiry and contact you within 24 hours.
                       </p>
 
-                      <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                      <div className="flex flex-col sm:flex-row gap-6 justify-center">
                         <Button
                           onClick={() => setIsSubmitted(false)}
                           variant="outline"
+                          className="rounded-full px-10 py-6 border-aria-teal/10 text-aria-teal hover:bg-aria-teal hover:text-white font-sans font-bold text-[10px] uppercase tracking-widest transition-all"
                         >
-                          Send Another Message
+                          Send Another Enquiry
                         </Button>
-                        <Button onClick={() => router.push('/')}>
+                        <Button 
+                          onClick={() => router.push('/')}
+                          className="rounded-full px-10 py-6 bg-aria-gold hover:bg-aria-teal text-white font-sans font-bold text-[10px] uppercase tracking-widest transition-all shadow-lg shadow-aria-gold/20"
+                        >
                           Return Home
                         </Button>
                       </div>
@@ -340,36 +352,36 @@ export default function ContactPage() {
         </section>
 
         {/* FAQs */}
-        <section className="py-16 bg-white">
+        <section className="py-24 bg-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="text-center mb-12"
+              className="text-center mb-16"
             >
-              <h2 className="text-3xl font-bold text-berry mb-4">
-                Frequently Asked Questions
+              <h2 className="text-4xl md:text-5xl font-serif font-medium text-aria-teal mb-6">
+                Support & FAQs
               </h2>
-              <p className="text-gray-600">
-                Quick answers to common questions about visiting our practice.
+              <p className="text-lg font-sans font-light text-aria-dark/60 max-w-2xl mx-auto">
+                Common questions about visiting our Marylebone clinic.
               </p>
             </motion.div>
 
-            <Accordion type="single" collapsible className="space-y-4">
+            <Accordion type="single" collapsible className="space-y-6">
               {contactFAQs.map((faq, index) => (
                 <AccordionItem
                   key={index}
                   value={`item-${index}`}
-                  className="bg-gray-50 rounded-lg px-6"
+                  className="bg-aria-beige/20 rounded-[2rem] border-none px-8 py-2 overflow-hidden"
                 >
-                  <AccordionTrigger className="text-left hover:text-rose transition-colors">
-                    <span className="font-semibold text-berry">
+                  <AccordionTrigger className="text-left hover:text-aria-gold transition-colors py-6 no-underline">
+                    <span className="font-serif font-medium text-xl text-aria-teal">
                       {faq.question}
                     </span>
                   </AccordionTrigger>
-                  <AccordionContent className="text-gray-600">
+                  <AccordionContent className="text-aria-dark/70 font-sans font-light leading-relaxed text-base pb-8">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>
@@ -379,30 +391,37 @@ export default function ContactPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 bg-berry">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <section className="py-24 bg-aria-teal relative overflow-hidden">
+           {/* Background Pattern */}
+          <div className="absolute inset-0 opacity-5">
+            <div className="absolute inset-0" style={{
+              backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
+              backgroundSize: '60px 60px'
+            }} />
+          </div>
+
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-4xl font-bold text-white mb-4">
+              <h2 className="text-4xl md:text-6xl font-serif font-medium text-white mb-8">
                 Ready to Start Your Journey?
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Book your free consultation and discover how we can help you
-                achieve your dreams of parenthood.
+              <p className="text-xl font-sans font-light text-aria-beige/80 mb-12 max-w-2xl mx-auto leading-relaxed">
+                Book your bespoke consultation and discover how world-class expertise meets compassionate care in the heart of London.
               </p>
               <Button
                 onClick={() => setIsBookingModalOpen(true)}
                 size="lg"
-                className="bg-rose hover:bg-rose-600 text-white border-none shadow-xl shadow-rose/20"
+                className="bg-aria-gold hover:bg-white text-white hover:text-aria-teal rounded-full px-12 py-8 font-sans font-bold text-xs uppercase tracking-[0.2em] transition-all duration-500 shadow-2xl"
               >
-                Book My Free Consultation
+                Book Bespoke Consultation
               </Button>
-              <p className="mt-4 text-gray-300 text-sm italic">
-                Consultation covers your history, tests, treatment options, costs, and next steps.
+              <p className="mt-10 text-white/30 text-[10px] font-sans font-bold uppercase tracking-[0.3em]">
+                Marylebone • Discrete Care • Clinical Excellence
               </p>
             </motion.div>
           </div>

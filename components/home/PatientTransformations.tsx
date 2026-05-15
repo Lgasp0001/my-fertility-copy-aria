@@ -6,15 +6,6 @@ import ComparisonSlider from '@/components/ui/ComparisonSlider';
 import { Button } from '@/components/ui/button';
 import { Sparkles, ArrowRight } from 'lucide-react';
 
-const cases = [
-    {
-        title: 'IVF Journey',
-        subtitle: 'Personalized support at every step',
-        before: 'https://images.unsplash.com/photo-1579152276502-53b8a3e144fe?auto=format&fit=crop&q=80&w=800',
-        after: 'https://images.unsplash.com/photo-1559757175-5700dde675bc?auto=format&fit=crop&q=80&w=800',
-    }
-];
-
 export default function PatientTransformations() {
     const scrollToQuiz = () => {
         const element = document.querySelector('#quiz');
@@ -32,15 +23,15 @@ export default function PatientTransformations() {
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                     >
-                        <Badge className="bg-rose/10 text-rose hover:bg-rose/20 mb-4 px-4 py-1 rounded-full border-rose/20">
-                            The Frost Philosophy
+                        <Badge className="bg-aria-gold/10 text-aria-gold border-none font-sans font-bold uppercase tracking-widest text-[9px] px-4 py-1.5 mb-6">
+                            The Aria Philosophy
                         </Badge>
                     </motion.div>
-                    <h2 className="text-4xl md:text-6xl font-bold text-berry mb-6 tracking-tight">
-                        Experience the <span className="text-rose">Boutique Difference.</span>
+                    <h2 className="text-4xl md:text-6xl font-serif font-medium text-aria-teal mb-6 tracking-tight">
+                        Experience Clinical <span className="italic text-aria-gold">Excellence.</span>
                     </h2>
-                    <p className="text-xl text-gray-600 max-w-2xl leading-relaxed">
-                        Trade the clinical cold for compassionate precision. Experience world-class care in our boutique South Congress studio.
+                    <p className="text-xl font-sans text-aria-dark max-w-2xl leading-relaxed font-light">
+                        Trade the impersonal clinical setting for world-class reproductive artistry in our private Marylebone sanctuary.
                     </p>
                 </div>
 
@@ -50,7 +41,7 @@ export default function PatientTransformations() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
-                        className="premium-glass p-4 rounded-[2.5rem] bg-gray-50/50"
+                        className="bg-aria-beige/20 p-4 rounded-[3rem]"
                     >
                         <ComparisonSlider
                             beforeImage="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=1200"
@@ -58,27 +49,35 @@ export default function PatientTransformations() {
                         />
                     </motion.div>
 
-                    <div className="mt-12 flex flex-col md:flex-row items-center justify-between bg-berry rounded-[2rem] p-8 md:p-12 text-white shadow-2xl">
-                        <div className="mb-8 md:mb-0">
-                            <h3 className="text-2xl font-bold mb-2 flex items-center gap-2">
-                                <Sparkles className="w-6 h-6 text-rose" />
-                                The Boutique Difference
+                    <div className="mt-16 flex flex-col md:flex-row items-center justify-between bg-aria-teal rounded-[3rem] p-10 md:p-16 text-white shadow-2xl relative overflow-hidden">
+                         {/* Background Pattern */}
+                        <div className="absolute inset-0 opacity-5 pointer-events-none">
+                            <div className="absolute inset-0" style={{
+                            backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
+                            backgroundSize: '30px 30px'
+                            }} />
+                        </div>
+                        
+                        <div className="mb-10 md:mb-0 relative z-10">
+                            <h3 className="text-2xl font-serif font-medium mb-4 flex items-center gap-3">
+                                <Sparkles className="w-6 h-6 text-aria-gold" />
+                                Bespoke Care
                             </h3>
-                            <p className="text-gray-300 text-lg max-w-md">
-                                &ldquo;Moving from a cold hospital setting to the Frosts studio was a revelation. I felt seen, heard, and supported throughout my entire journey.&rdquo;
+                            <p className="text-aria-beige/70 font-sans font-light text-lg max-w-md leading-relaxed italic">
+                                &ldquo;Moving to the Aria clinic was a revelation. I felt seen, heard, and supported with world-class expertise throughout my journey.&rdquo;
                             </p>
                         </div>
-                        <div className="flex flex-col items-center gap-4">
+                        <div className="flex flex-col items-center gap-6 relative z-10">
                             <Button
                                 onClick={scrollToQuiz}
                                 size="lg"
-                                className="bg-rose hover:bg-rose-600 text-white px-8 py-7 rounded-xl text-lg font-bold transition-all transform hover:-translate-y-1 group"
+                                className="bg-white hover:bg-aria-gold text-aria-teal hover:text-white px-10 py-8 rounded-full text-xs font-sans font-bold uppercase tracking-[0.2em] transition-all transform hover:-translate-y-1 group shadow-xl"
                             >
-                                Start Your Assessment
-                                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                                Start Assessment
+                                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                             </Button>
-                            <p className="text-[10px] text-white/50 uppercase tracking-widest text-center">
-                                Consultation covers history, tests, options, costs \u0026 next steps
+                            <p className="text-[9px] font-sans font-bold uppercase tracking-[0.3em] text-white/30 text-center leading-relaxed">
+                                Marylebone • Private Care • Clinical Excellence
                             </p>
                         </div>
                     </div>
